@@ -2,7 +2,7 @@
 let generateBtn = document.querySelector("#generate");
 
 
-// strings for the prompt to randomize and display
+// strings that hold the numbers, letters and symbols
 let sym = "'`~!@#$%^&*()-_=+][{}'/.,<>?";
 let symArr = sym.split("");
 console.log(symArr);
@@ -51,7 +51,7 @@ function options() {
     return optionsObj;
     }
 
-// function that randomizes and displays the string of numbers, letters and symbols
+// function that randomizes the numbers, letters and symbols
 function generatePassword() {
     var options2 = options();
     console.log(options2);
@@ -74,7 +74,7 @@ function generatePassword() {
     if (options2.includeSym === true) {
         superArray = superArray.concat(symArr);
     }
-    
+
     console.log(superArray);
 
 
@@ -84,6 +84,7 @@ function generatePassword() {
         let digit = superArray[index];
         results.push(digit)
     }
+    // this empty string is where the randomized characters will be
     return results.join("")
 }
 
